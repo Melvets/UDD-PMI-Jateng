@@ -1,0 +1,333 @@
+/* Inisialisasi warna */
+:root {
+    --primary: #e60000;
+    --darkprimary: #cc0000;
+    --bg: #fafafa;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #252525;
+    min-height: 2000px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 10%; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid var(--primary);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Image */
+.navbar img {
+    width: 9rem;
+}
+
+/* Navbar-nav */
+.navbar .navbar-nav a {
+    color: #252525;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin: 0 0.6rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0, 5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Navbar-extra */
+.navbar .navbar-extra .cta {
+    display: inline-block;
+    padding: 0.7rem 2.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: var(--primary);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba (1, 1, 3, 0.5);
+}
+
+.navbar .navbar-extra .cta:hover {
+    color: #ffffff;
+}
+
+.navbar .navbar-extra a {
+    color: #252525;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/bg-udd-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* filter: brightness(60%); */
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: -1%;
+    background: linear-gradient(
+        0deg,
+        rgba(250, 250, 250, 1) 5%,
+        rgba(255, 255, 255, 0) 20%
+    );
+}
+
+.hero .content {
+    max-width: 48rem;
+    text-align: right;
+    padding: 25rem 5% 1.4rem 5%;
+    margin-left: 58%;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(1, 1, 3, 0.5);
+    line-height: 1;
+}
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1rem;
+    /* text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.868); */
+}
+
+/* ==================== Jadwal MU ==================== */
+/* TITLE */
+.jadwalmu {
+    padding: 8rem 10% 1.4rem;
+}
+
+.jadwalmu h2 {
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.jadwalmu h2 span {
+    color: var(--primary);
+}
+
+.jadwalmu p {
+    text-align: center;
+    margin-bottom: 2rem; 
+    /* font-size: 1.1em; */
+}
+
+/* TABLE */
+.jadwalmu .table-mu label {
+    text-align: center;
+}
+
+input {
+    background-color: #cc0000;
+    height: 1.5rem;
+}
+
+table {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    height: 2.5rem;
+    padding: 0.5rem;
+} 
+
+thead th {
+    background-color: var(--darkprimary);
+    color: white;
+    padding: 1rem;
+}
+
+table td {
+    line-height: 1.8rem;
+}
+
+table .cent {
+    text-align: center;
+}
+
+table td a {
+    color: var(--darkprimary);
+}
+
+.t_isi:hover {background-color: #ababab44;}
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* Desktop */
+/* @media (max-width: 1920px) {
+  html {
+    font-size: 150%;
+  }
+} */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+    img {
+        size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 890px) {
+    html {
+        font-size: 65%;
+    }
+    img {
+        size: 65%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #252525;
+        width: 25rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .navbar .navbar-extra a {
+        margin: 0 2rem;
+    }
+
+    .navbar .navbar-extra {
+        display: flex;
+        align-items: end;
+    }
+
+    .hero .content {
+        margin-left: 40%;
+        padding: 1.4rem 3%;
+        font-size: 1em;
+        max-width: 40rem;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    img {
+        size: 55%;
+    }
+    .hero .content {
+        margin-left: 37%;
+        padding: 1.4rem 3%;
+        font-size: 0.7em;
+        max-width: 31rem;
+    }
+}
