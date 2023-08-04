@@ -22,7 +22,7 @@
     
   </head>
   <body>
-    <!-- ==================== Navbar ==================== -->
+    <!-- ==================== Navbar ====================== -->
     <nav class="navbar">
       <img src="img/PMI.png" alt="Logo PMI" />
 
